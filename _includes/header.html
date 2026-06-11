@@ -1,0 +1,20 @@
+<header class="site-header">
+
+  <div class="wrapper">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%} 
+    <h1>
+      <a class="site-title" rel="author" href="{{ "/" | relative_url }}">玉草央</a>
+    </h1>
+      <nav class="site-nav"> 
+        <div class="trigger">
+          {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
+            <a class="page-link" >用文字絮絮叨叨</a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </nav> 
+  </div>
+</header>

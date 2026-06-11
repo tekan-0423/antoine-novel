@@ -1,0 +1,873 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>3</title><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #feffff;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #333333;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#09844f;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #0595bf;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #333333;
+}
+.markdown-body em{
+  color: #333333;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366dd;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#0366dd;stroke: #0366dd;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #09844f;
+  vertical-align: middle;
+  background-color: #f7f8f8;
+  border: 1px solid #e1e2e2;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e2e2;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #636363;
+  border-left: .25em solid #bbbbbb;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #e7e8e8;
+  color: #0595bf;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #0595bf;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #0595bf;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #0595bf;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #0595bf;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #0595bf;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #b9baba;
+}
+
+.markdown-body table tr {
+  background-color: #feffff;
+  border-top: 1px solid #b9baba;
+}
+
+.markdown-body table th {
+  background-color: #e7e8e8;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f9f9;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #f7f8f8;
+  color: #09844f;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f8f8;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #09844f;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #e1e2e2;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #f7f8f8;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #8e9c92;
+}
+
+.token.punctuation {
+    color: #2834ce;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #2834ce;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #d32d26;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #bc319c;
+}
+
+.token.function,
+.token.class-name {
+    color: #967d41;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #784830;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #bfc0c0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #bfc0c0;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    pre, code, pre code {
+     overflow: visible !important;
+     white-space: pre-wrap !important;       /* css-3 */
+     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap !important;      /* Opera 4-6 */
+     white-space: -o-pre-wrap !important;    /* Opera 7 */
+     word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+
+
+div.code-toolbar {
+  position: relative;
+}
+
+div.code-toolbar > .toolbar {
+  position: absolute;
+  z-index: 10;
+  top: .3em;
+  right: .2em;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+div.code-toolbar:hover > .toolbar {
+  opacity: 1;
+}
+
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+  opacity: 1;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item {
+  display: inline-block;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a {
+  cursor: pointer;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+  color: inherit;
+  font-size: .8em;
+  padding: 4px .5em;
+  background: #f5f2f0;
+  background: rgba(224, 224, 224, 0.4);
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+  border-radius: .5em;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus {
+  color: inherit;
+  text-decoration: none;
+}
+</style> <style>body{max-width:808px; padding:24px;}</style></head><body><div id='markdown_content' class='markdown-body'><h2><a id="3-appartement-au-bord-du-lac" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.Appartement au bord du lac</h2>
+<p>J'ai loué un appartement au bord du lac, bien que ce ne soit qu'un simple studio, cela suffit pour moi tout seul.</p>
+<p>L'appartement est situé au 22e étage, à travers les baies vitrées du balcon, on peut voir la vaste étendue du lac. Dans cette ancienne ville chinoise, il y a une centaine de petits et grands lacs. Celui-ci est le plus grand.</p>
+<p>En se tenant devant la fenêtre d'un immeuble de grande hauteur, la vue sur l'eau n'est pas du tout celle d'un lac. C'est un monde étrange, une porte où la réalité et le magique se croisent, le paysage construit par l'homme et les immeubles se plongent profondément dans le cœur du lac, l'eau du lac s'étire comme les griffes d'une énorme créature étrangère en colère, s'étendant vers la terre.</p>
+<p>Le combat entre la créature géante et l'humanité change continuellement au fil du temps, les lacs se teintent alternativement de rouge, d'orange, de différentes nuances de bleu et de gris, ainsi que de couleurs éclatantes et vives mélangées, affichant avec éclat l'humeur de la créature. Les bâtiments humains restent impassibles, alignés en rangées imposantes, regardant fixement l'eau du lac, aussi solennels que les rivets sur une coque mécanique épaisse.</p>
+<p>Je m'assois souvent au bord de la fenêtre du balcon, rêvassant en fumant tranquillement une cigarette, fixant le ciel, les nuages et la légère brume grise en forme de coquille d'œuf suspendue au-dessus de la ville.</p>
+<p>…….</p>
+<p>Ça fait déjà deux mois que j'ai déménagé de l'appartement que je partageais avec ma petite amie.</p>
+<p>Nous nous sommes rencontrés après notre arrivée dans cette ville, et en y repensant attentivement, cela fait déjà quatre ans. Grâce à elle, j'ai surmonté les moments solitaires du début dans cette ville étrangère.</p>
+<p>Nous avons emménagé ensemble il y a un peu plus de deux ans. Nous avons loué un petit appartement dans un quartier non loin de mon bureau. À l'époque, elle se préparait pour un examen, tandis que j'étais occupé à essayer de sauver ma société au bord de la faillite. Étant donné que nous étions en couple depuis un an, nous avons pensé qu'il était temps de passer à l'étape suivante et de vivre ensemble. C'était aussi une option économique, car cela nous permettait de partager les frais.</p>
+<p>Bien que nos finances n'étaient pas très larges, nous avons quand même soigneusement aménagé la pièce, acheté des meubles et des appareils électroménagers, et acheté les articles essentiels pour la vie. Marchant main dans la main dans les salles d'exposition d'IKEA, nous imaginions à quoi ressemblerait notre propre petit espace à l'avenir, c'était un processus joyeux.</p>
+<p>Peu de temps après, les problèmes de gestion de l'entreprise ont commencé à s'aggraver. Pour trouver de nouvelles opportunités, j'ai commencé à passer plus de temps à fréquenter des soirées, à me rendre dans des endroits plus éloignés à la recherche de possibilités. J'ai fini par réaliser que ces rassemblements étaient principalement pour se vanter et qu'ils étaient à des kilomètres des vraies commandes. Non seulement il n'y avait aucun résultat positif, mais cela a également pris beaucoup de temps et d'argent, en plus d'attirer des ennuis et des personnes problématiques.</p>
+<p>Quand j'ai réalisé que l'entreprise n'avait plus les moyens de continuer à jouer en dehors, je suis resté dans cette petite maison à me tourner les pouces, sans rien à faire. Je désespérais en croyant que mes dernières opportunités finiraient par se concrétiser. J'étais convaincu qu'une d'entre elles pourrait renverser la situation. Tout ce que je devais faire était d'attendre patiemment une réponse.</p>
+<p>Même si ma petite amie n'a jamais fait de commentaires sur mon travail, se concentrant simplement sur ses études, en rangeant la maison, en faisant les courses et en cuisinant, les conflits ont commencé à s'accumuler, petits et grands, à l'intérieur de la maison. Je ne savais rien de ses examens, et même les nouvelles de sa réussite aux examens, je les apprenais par le biais de ses publications sur les réseaux sociaux.</p>
+<p>……<br />
+Depuis le jour où j'ai appris la nouvelle d'Antoine, j'ai plongé tête baissée dans l'écriture, comme si j'avais soudainement découvert un moyen de m'échapper de la réalité. J'ai refusé toute interaction sociale, n'ai pas parlé à ma petite amie, je me suis simplement assis devant mon ordinateur et ai tapé frénétiquement sur le clavier, comme si j'étais obligé de terminer ce travail.</p>
+<p>Même lorsque ma petite amie a évoqué l'idée de rompre, j'ai simplement répondu d'un léger “hm….” avant de me replonger dans l'écran de mon ordinateur.</p>
+<p>Le jour où j'ai déménagé, l'atmosphère était étouffante. Le temps chaud et humide me laissait incertain quant à rester debout ou m'asseoir. En regardant par la fenêtre, j'ai remarqué que d'épais nuages noirs s'accumulaient, et la pression atmosphérique était si basse que cela me coupait le souffle.</p>
+<p>J'ai pris la dernière canette de bière glacée du réfrigérateur, buvant lentement tout en préparant mes bagages. La plupart de mes vêtements avaient été achetés quand je suis arrivé en ville, et même après plusieurs années, il était temps de les jeter. J'ai conservé quelques T-shirts avec le logo de la start-up, ces logos me rappelaient la société que nous avions créée avec des partenaires en France.</p>
+<p>J'ai hésité avec les vêtements que ma petite amie m'avait offerts, mais finalement, je les ai laissés sur le lit. Peut-être que c'était mon ego qui agissait.</p>
+<p>&quot;Dehors, le ciel était sombre, il allait pleuvoir&quot;, dit ma petite amie en se tenant près de la fenêtre, me tournant le dos.</p>
+<p>&quot;Ce n'est pas grave.&quot; J'ouvris doucement la porte et sortis de cette petite maison autrefois soigneusement aménagée.</p>
+<p>Je chargeai mes bagages dans le coffre et sur les sièges arrière de la voiture. Je n'avais pas beaucoup de possessions, même la petite voiture n'était pas remplie à ras bord. Au moment où le moteur démarra, de grosses gouttes de pluie tombèrent violemment sur le pare-brise avant de la voiture, faisant un bruit sourd et me faisant sursauter. Avant même de quitter le parking en plein air, le rideau de pluie enveloppait déjà le monde entier.</p>
+<p>Bien que les essuie-glaces soient réglés à leur vitesse maximale, je devais toujours coller mon regard sur le pare-brise pour voir la route à travers les interstices entre les gouttes de pluie et les essuie-glaces. Le martèlement de l'eau contre la carrosserie produisait un son continu et sourd, isolant tous les autres sons extérieurs.</p>
+<p>Ce qui aurait normalement été un trajet de 20 minutes prit une heure pour atteindre le nouvel appartement. Je garai la voiture, sous une pluie battante, et transportai mes bagages dans l'ascenseur, les empilant tous dans un coin du nouveau salon. Alors que j'ouvrais les fenêtres pour laisser entrer l'air frais, je remarquai que la pluie s'était arrêtée.</p>
+<p>&quot;Encore un peu plus de patience et ça ira&quot;, murmurai-je.</p>
+<p>Je me saisis d'une serviette dans une valise pour m'essuyer le visage et le corps, allumai une cigarette et m'assis en dessous de la fenêtre du balcon, observant le lac, le ciel, les nuages bas et la brume d'eau grise qui recouvrait la ville au loin, telle une coquille d'œuf.</p>
+<p>&quot;Cette canette de bière à peine entamée... Va-t-elle la finir ou la jeter ? La bouteille de bière n'a pas de sous-verre, l'eau va former une tache, j'espère qu'elle pensera à l'essuyer...&quot;</p>
+<p>&quot;Les vêtements qu'elle a laissés derrière sont encore en bon état, laisser tout cela là-bas est un peu gênant, je me demande si elle va se sentir blessée...&quot;</p>
+<p>&quot;Dans cette maison, le nouveau propriétaire ne devrait pas tarder à emménager, n'est-ce pas ? Dormir dans le lit où j'ai dormi, manger à la table où j'ai mangé.&quot;</p>
+<p>...</p>
+<p>Concentré, je continuais d'écrire mon roman inachevé, &quot;La Chambre la Mémoire&quot;, dans la location. L'histoire de ce roman atteignait son apogée, et je sentais que la conclusion n'était plus très loin.</p>
+<p>Chaque matin, je me levais tôt. Comme je n'avais pas de rideaux, la lumière du ciel qui commençait à briller à 5 heures du matin m'éveillait invariablement. Après m'être lavé, je me préparais une tasse de café avant de descendre courir au bord du lac. Les brises matinales d'été étaient agréables, et les branches des saules effleuraient doucement la surface du lac, créant des reflets inversés. Mon cerveau se gorgeait d'oxygène, et après avoir couru jusqu'à ce que la faim me tenaille, je trouvais un endroit pour prendre mon petit déjeuner.</p>
+<p>La jeune fille de la supérette en bas était amicale envers moi. Chaque fois que je passais, elle prenait le temps d'échanger quelques mots. Elle était étudiante à l'université, en dernière année, venue aider ses parents à gérer le magasin pour l'été. À côté de la supérette, un couple du Nord-Est tenait un stand de barbecue, et ils avaient l'air heureux. Leur fils avait été admis dans une université de renom. Dans le restaurant où je prenais mon petit déjeuner, deux jeunes hommes chauves de la ville voisine, souriants et accueillants, préparaient de délicieuses nouilles.</p>
+<p>Comme une sorte de routine, à 9 heures, je revenais devant ma fenêtre pour commencer ma journée de travail. Je me demandais parfois si c'était vraiment un travail, car il n'y avait pas de rémunération et pas de clients, seulement mon propre désir de le faire.</p>
+<p>Quand j'avais faim, je descendais manger un repas simple en bas. Quand j'étais fatigué, je m'affalais sur le canapé pour faire une sieste. Bien que ce fût l'été, la chaleur ne m'embêtait pas trop. Avec une bonne circulation d'air entre les deux côtés de l'appartement, la brise du lac glissait à travers les chambres comme un chat agile, se faufilant entre le lit simple de la chambre et le canapé du salon, à travers les vêtements suspendus, puis s'évadant par le balcon, laissant une douce résonance derrière elle.</p>
+<p>J'avais quelques plantes vertes que la jeune fille de la supérette m'avait offertes. Pour être plus précis, ce n'étaient que quelques brins de lierre. Elle avait dit qu'ils mourraient sans soleil, laissés dans un coin obscur du magasin. Elle m'avait demandé si je voulais les prendre. J'avais accepté avec plaisir.</p>
+<p>Avec mes soins attentifs, elles reprirent rapidement vie et poussèrent vigoureusement, couvrant le sol de nouvelles feuilles vert tendre. J'en prélevai quelques tiges bien développées, les mis dans un vase en plastique transparent, et les rapportai à la supérette. La jeune fille les plaça près du comptoir, et en quelques jours, elles avaient déjà pris racine.</p>
+<p>Au moment du dîner, j'avais commencé à apprendre à cuisiner par moi-même. Cela avait bon goût et le temps passé en cuisine ne me dérangeait pas trop, tant que la chaleur ne devenait pas insupportable. Je buvais une bière glacée, profitais de la brise du lac. La vie en solitaire n'était pas aussi ennuyeuse que je l'avais imaginé. Je commençais même à penser que je pourrais vivre ainsi pour le reste de ma vie.</p>
+<p>J'avais fait quelques calculs. Mon compte en banque contenait encore de l'argent, et il restait des économies dans une banque étrangère que je n'avais pas touchées. Même si je ne travaillais pas pendant un an, je pouvais m'en sortir. Pour l'instant, tout ce qui m'importait était d'achever mon roman, je laissais de côté les autres préoccupations.</p>
+<p>Tous les quelques jours, je me sentais extrêmement fatigué, comme si un interrupteur s'était éteint dans mon cerveau, refusant de traiter l'intrigue du roman. Je m'asseyais silencieusement sous la fenêtre du balcon, fumais une cigarette, regardais un film, buvais une bière ou me perdais dans mes pensées. En général, je retrouvais mon état normal le lendemain, l'interrupteur s'allumant de nouveau, et je pouvais continuer à écrire la suite de l'histoire.</p>
+<p>Mais cette fois-ci, c'était différent. Cela faisait déjà trois jours que je n'avais pas écrit un mot.</p>
+<p>Les quelques phrases que j'écrivais étaient toutes supprimées, rien ne semblait fonctionner. L'interrupteur de ma tête avait disparu, et durant ces trois jours, rien de valable ne sortait. J'essayais toujours de suivre mon ancienne routine, m'asseyant sous la fenêtre à l'heure prévue, mais je me sentais impuissant.</p>
+<p>Une frustration sans raison commença à s'accumuler, mais je n'avais personne à blâmer ni à affronter.</p>
+<p>Le quatrième jour, j'avais marché le long du lac pendant toute la matinée. Je n'avais pas d'appétit pour le déjeuner et j'avais commencé à errer dans ma chambre l'après-midi.</p>
+<p>Finalement, fatigué de cette agitation, je m'étais assis sous la fenêtre et j'avais contemplé le monstre du lac au loin, en bas. Je réfléchissais à comment j'en étais arrivé là, étape par étape. Souvent, je me demandais ce qui se serait passé si j'avais fait des choix différents à certains moments, mais à part me rendre déprimé, cela ne servait à rien.</p>
+<p>Une bouteille de bière après l'autre, une cigarette après l'autre, je restais incapable de trouver une phrase convenable.</p>
+<p>&quot;Si seulement je pouvais trouver l'inspiration pour continuer à écrire, peu importe le prix.&quot; Je restai là, à fixer la fenêtre.</p>
+<p>Le paysage au-dehors était d'abord baigné dans la lumière du soleil, comme une grande vitre propre. Soudain, au loin à l'horizon, un énorme feu d'artifice éclata, plongeant le monde dans l'obscurité. Les lumières de la ville commencèrent à briller, les lumières serpentant comme des serpents de feu depuis des grottes invisibles en journée, et les étoiles parsemèrent le ciel pour annoncer le festin de l'humanité.</p>
+<p>J'allumai la lumière à l'intérieur de la pièce, et un visage se refléta instantanément dans la vitre. Je le fixai, et il me fixa en retour, comme s'il n'était pas mon propre reflet. Derrière ce visage se cachait l'ombre du monstre du lac, tandis que les serpents de feu s'éveillaient à leur tour pour danser à distance, attendant leur moment, retenant leur souffle.</p>
+<p>&quot;Je ne peux plus écrire...&quot; Je le dis, découragé.</p>
+<p>&quot;Alors, c'est que le temps est venu.&quot; Ce visage me répondit.</p>
+<p>&quot;Quel temps... je ne comprends pas.&quot;</p>
+<p>&quot;Viens...&quot;</p>
+<p>Ce visage acquiesça à travers la fenêtre du 22e étage. À l'extérieur, la nuit était sombre et impénétrable. De l'autre côté de la route de banlieue, la jeune fille de la supérette était absorbée dans son téléphone derrière le comptoir, un groupe de clients sirotait des bières à la table du stand de barbecue, le propriétaire se tenait devant le barbecue en sueur, la femme du propriétaire s'affairait à nettoyer des écrevisses, les deux jeunes propriétaires du restaurant de nouilles déjeunaient torse nu, en train de jouer aux cartes avec des amis.</p>
+<p>J'ai tendu la main vers ce visage, il a également tendu la main vers moi. Au moment où nos doigts se sont touchés, la créature gigantesque du lac a bondi hors de l'eau, le serpent de feu s'est soudainement réveillé pour danser frénétiquement. Le battement de mon cœur dans ma poitrine a heurté une explosion qui ébranlait les cieux et la terre, les chevaux parés de flammes bleues galopaient dans les rivières, les anciennes particules cosmiques se sont écoulées le long de mes veines vers la fin du temps, et les éclatantes lumières de feux d'artifice dans le ciel nocturne se sont déversées dans mes yeux limpides.</p>
+<p>...</p>
+<p>Quelques mois plus tard, alors que le temps devenait plus frais, mon nouveau livre fut publié avec succès. En tant que mon premier roman, une œuvre de 200 000 mots, je n'avais pas beaucoup de confiance. J'avais hésité à plusieurs reprises, mais finalement, grâce à l'aide d'amis, j'avais pu obtenir l'aide d'une agence littéraire pour trouver une maison d'édition appropriée. Après quelques séries de modifications mineures, il avait passé trois cycles de révision et de correction, et &quot;La Chambre de la Mémoire&quot; était finalement là, publié et exposé au monde.</p>
+<p>Le jour où je reçus un exemplaire du livre, je le manipulai entre mes mains. Il avait une épaisseur moyenne, ni trop ni pas assez, mais il me semblait étranger. C'était comme un artefact retrouvé dans les profondeurs de l'océan, difficile à relier à moi-même. Je parcourus quelques pages pour me rappeler les conditions dans lesquelles j'avais écrit.</p>
+<p>Le soir même, alors que je buvais tout seul un verre de vin rouge, Antoine apparut, comme je l'avais pressenti.</p>
+<p>&quot;Comment ça fait d'être un écrivain maintenant ?&quot;</p>
+<p>Devant un café en plein air dans les rues de Paris, le soleil couchant était un peu plus bas qu'avant. Il s'était assis à une table sous l'auvent du café, me faisant signe de m'asseoir à côté de lui. Nous étions séparés par une petite table ronde en métal vert foncé, avec une légère bordure en aluminium. Sur la table, il y avait un petit cendrier en cuivre brillant, poli à la perfection, et mis à part ça, il n'y avait rien.</p>
+<p>&quot;J'ai terminé d'écrire et c'est également publié, j'ai ressenti comme si j'entrais nu dans un centre commercial. Laisser les autres commenter à leur guise.&quot; J'ai réfléchi un moment, puis j'ai ajouté : &quot;Et en plus, l'absence totale de commentaires est aussi une forme de commentaire.”</p>
+<p>Je réalisai soudain que je pouvais désormais communiquer en français sans problème, contrairement à la dernière fois où je ne pouvais que grogner.</p>
+<p>&quot;Exactement.&quot; Tout en convenant, il arborait un sourire malicieux, et je remarquai que les rides aux coins de ses yeux étaient plus nombreuses que la dernière fois.</p>
+<p>&quot;Tu l'as rencontré ?&quot;</p>
+<p>&quot;Qui ?&quot;</p>
+<p>&quot;Réfléchis, tu devrais savoir de qui je parle.&quot;</p>
+<p>&quot;Ce visage ?&quot; Mon cœur se mit à battre plus vite. &quot;Je pensais que c'était une illusion causée par l'ivresse.&quot;</p>
+<p>&quot;La personne avec qui tu parles maintenant, est-ce une illusion ? Quand les illusions discutent des illusions, c'est normal, non ?&quot; Antoine me dit en souriant.</p>
+<p>&quot;Je suis vraiment perdu. Qui est-il ?&quot;</p>
+<p>Antoine me fit un clin d'œil mystérieux, ne répondant pas tout de suite, &quot;Qu'as-tu prévu de faire ensuite ?&quot;</p>
+<p>&quot;Après être resté ici si longtemps, je veux sortir et me balader un peu.&quot; J'avais reçu un paiement d'un petit projet pendant cette période, ce qui m'avait apporté un petit revenu supplémentaire. J'avais en tête quelques endroits agréables où aller en voiture, pour y séjourner une quinzaine de jours, ce qui devrait être très agréable.</p>
+<p>&quot;Bonne idée ! Moi aussi, je prévois de m'éloigner un peu. J'ai le pressentiment que des ennuis vont bientôt me rattraper. Fais attention, cet individu est dangereux.&quot;</p>
+<p>&quot;Eh bien ! Qui est-ce ?&quot; J'avais commencé à être agacé par les airs mystérieux d'Antoine.</p>
+<p>&quot;Nous nous reverrons.&quot; Un instant, son regard sembla perdre de sa lumière, puis il la retrouva rapidement, souriant et s'éloignant.</p>
+</div></body></html>
